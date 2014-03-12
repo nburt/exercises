@@ -43,9 +43,9 @@ describe WeatherReader do
     pending
     weather_reader = WeatherReader.new
 
-    expected = 9
+    expected = 14
 
-    expect(weather_reader.largest_temperature_difference).to eq expected
+    expect(weather_reader.smallest_temperature_difference).to eq expected
   end
 end
 
