@@ -2,6 +2,13 @@ require 'rspec/core'
 require 'weather_data'
 
 describe WeatherReader do
+  it "should read the file" do
+    weather_reader = WeatherReader.new
+    weather_reader.read_data("weather_data.txt")
+
+    expect(weather_reader).not_to eq(nil)
+  end
+
   it "should output the day number with the smallest temperature spread" do
     pending
     weather_reader = WeatherReader.new
