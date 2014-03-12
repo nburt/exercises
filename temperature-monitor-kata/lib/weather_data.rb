@@ -17,7 +17,7 @@ class WeatherReader
     @data = @data.slice(8..-3)
   end
 
-  def array_of_strings_for_each(element_of_array)
+  def array_of_strings_for_each
     i = 0
     @data.each do |x|
       @data[i] = @data[i].split(" ")

@@ -36,7 +36,7 @@ describe WeatherReader do
 
     expected = ["1", "88", "59", "74", "53.8", "0.00", "F", "280", "9.6", "270", "17", "1.6", "93", "23", "1004.5"]
 
-    expect(weather_reader.array_of_strings_for_each(0)).to eq expected
+    expect(weather_reader.array_of_strings_for_each).to eq expected
   end
 
   it "should output the day number with the smallest temperature spread" do
