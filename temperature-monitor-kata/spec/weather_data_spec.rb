@@ -39,6 +39,19 @@ describe WeatherReader do
     expect(weather_reader.array_of_strings_for_each).to eq expected
   end
 
+  it "should subtract the highest temperature from the lowest temperature for each day and return the difference in a hash of days and temp diffs" do
+    weather_reader = WeatherReader.new
+    weather_reader.read_data("weather_data.txt")
+    weather_reader.create_data_array
+    weather_reader.eliminate_junk
+    weather_reader.array_of_strings_for_each
+    weather_reader.temperature_difference_creator
+
+    expected = 29
+
+    expect(weather_reader.temperature_difference_accessor(0)).to eq expected
+  end
+
   it "should output the day number with the smallest temperature spread" do
     pending
     weather_reader = WeatherReader.new

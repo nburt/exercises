@@ -25,4 +25,17 @@ class WeatherReader
     end
     @data[0]
   end
+
+  def temperature_difference_creator
+    @difference_hash = Hash.new
+    i = 0
+    @data.each do |x|
+      @difference_hash[i] = @data[i][1].to_i - @data[i][2].to_i
+      i += 1
+    end
+  end
+
+  def temperature_difference_accessor(key)
+    @difference_hash[key]
+  end
 end
