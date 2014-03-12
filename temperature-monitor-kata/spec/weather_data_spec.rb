@@ -53,7 +53,7 @@ describe WeatherReader do
   end
 
   it "should output the day number with the smallest temperature spread" do
-    pending
+
     weather_reader = WeatherReader.new
     weather_reader.read_data("weather_data.txt")
     weather_reader.create_data_array
@@ -61,7 +61,7 @@ describe WeatherReader do
     weather_reader.array_of_strings_for_each
     weather_reader.temperature_difference_creator
 
-    expected = 14
+    expected = 2
 
     expect(weather_reader.smallest_temperature_difference).to eq expected
   end
