@@ -1,12 +1,13 @@
 class WeatherReader
-  def initialize
-    @data = nil
-  end
-
-  def read_data(file)
+  def initialize(file)
     @data = File.open(file) do |x|
       x.read
     end
+  end
+
+  def smallest_temperature_difference
+    @difference_hash = @difference_hash.sort_by { |k, v| v }
+    @difference_hash[0][1]
   end
 
   def create_data_array
@@ -38,9 +39,7 @@ class WeatherReader
   def temperature_difference_accessor(key)
     @difference_hash[key]
   end
-
-  def smallest_temperature_difference
-    @difference_hash = @difference_hash.sort_by { |k, v| v }
-    @difference_hash[0][1]
-  end
 end
+
+
+#rewrite spec so you only have to call one method
