@@ -38,4 +38,9 @@ class WeatherReader
   def temperature_difference_accessor(key)
     @difference_hash[key]
   end
+
+  def smallest_temperature_difference
+    @difference_hash = @difference_hash.sort_by { |k, v| v }
+    @difference_hash[0][1]
+  end
 end
