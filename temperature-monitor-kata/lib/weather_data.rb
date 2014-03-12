@@ -6,9 +6,15 @@ class WeatherReader
   end
 
   def smallest_temperature_difference
+    create_data_array
+    eliminate_junk
+    array_of_strings_for_each
+    temperature_difference_creator
     @difference_hash = @difference_hash.sort_by { |k, v| v }
     @difference_hash[0][1]
   end
+
+  private
 
   def create_data_array
     @data = @data.lines
