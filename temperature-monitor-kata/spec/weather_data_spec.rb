@@ -9,6 +9,15 @@ describe WeatherReader do
     expect(weather_reader).not_to eq(nil)
   end
 
+  it "should create an array of data" do
+    weather_reader = WeatherReader.new
+    weather_reader.read_data("weather_data.txt")
+
+    expected = true
+
+    expect(weather_reader.create_data_array.is_a? Array).to eq expected
+  end
+
   it "should output the day number with the smallest temperature spread" do
     pending
     weather_reader = WeatherReader.new
