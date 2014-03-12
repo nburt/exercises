@@ -28,6 +28,17 @@ describe WeatherReader do
   expect(weather_reader.eliminate_junk).to eq expected
   end
 
+  it "should create an array of string values for each piece of data" do
+    weather_reader = WeatherReader.new
+    weather_reader.read_data("weather_data.txt")
+    weather_reader.create_data_array
+    weather_reader.eliminate_junk
+
+    expected = ["1", "88", "59", "74", "53.8", "0.00", "F", "280", "9.6", "270", "17", "1.6", "93", "23", "1004.5"]
+
+    expect(weather_reader.array_of_strings_for_each(0)).to eq expected
+  end
+
   it "should output the day number with the smallest temperature spread" do
     pending
     weather_reader = WeatherReader.new
