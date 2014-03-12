@@ -30,7 +30,7 @@ class WeatherReader
     @difference_hash = Hash.new
     i = 0
     @data.each do |x|
-      @difference_hash[i] = @data[i][1].to_i - @data[i][2].to_i
+      @difference_hash[i + 1] = @data[i][1].to_i - @data[i][2].to_i
       i += 1
     end
   end
