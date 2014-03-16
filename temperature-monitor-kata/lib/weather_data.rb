@@ -48,4 +48,4 @@ class WeatherReader
 end
 
 
-#rewrite spec so you only have to call one method
+# refactor to get rid of instance variables, call other methods with methods
