@@ -19,6 +19,12 @@ describe RPSGame do
 
     expect(game.play).to eq "Error, please type rock, paper, or scissors."
   end
+
+  it "generates a computer choice and compares it to the user choice, generating a winner" do
+    game = RPSGame.new("rock", 3)
+
+    expect(game.play).to eq "Congrats, rock beats scissors, you win!"
+  end
 end
 
 # Your task is to write a program to play rock-paper-scissors with
