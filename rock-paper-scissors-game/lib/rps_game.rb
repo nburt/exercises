@@ -1,7 +1,7 @@
 class RPSGame
 
   def initialize(user_choice)
-    @user_choice = user_choice
+    @user_choice = user_choice.downcase
   end
 
   def play

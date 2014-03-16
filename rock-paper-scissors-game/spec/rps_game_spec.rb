@@ -7,6 +7,13 @@ describe RPSGame do
 
     expect(game.play).to eq "Congrats, rock beats scissors, you win!"
   end
+
+  it "can process user choices of any case" do
+    game = RPSGame.new("PaPeR")
+
+    expect(game.play).to eq "Congrats, paper beats rock, you win!"
+  end
+
 end
 
 # Your task is to write a program to play rock-paper-scissors with
