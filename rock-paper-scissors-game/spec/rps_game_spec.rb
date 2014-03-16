@@ -14,6 +14,11 @@ describe RPSGame do
     expect(game.play).to eq "Congrats, paper beats rock, you win!"
   end
 
+  it "will display an error message if rock, paper, or scissors is not typed" do
+    game = RPSGame.new("Orange")
+
+    expect(game.play).to eq "Error, please type rock, paper, or scissors."
+  end
 end
 
 # Your task is to write a program to play rock-paper-scissors with

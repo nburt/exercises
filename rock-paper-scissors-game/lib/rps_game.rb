@@ -12,6 +12,8 @@ class RPSGame
         "Congrats, paper beats rock, you win!"
       when @user_choice == "scissors"
         "Congrats, scissors beats paper, you win!"
+      else
+        "Error, please type rock, paper, or scissors."
     end
   end
 
