@@ -2,14 +2,9 @@ require 'rspec/core'
 require 'rps_game'
 
 describe RPSGame do
-  it "returns a message when rock, paper, or scissors win" do
-    game = RPSGame.new("rock")
-
-    expect(game.play).to eq "Congrats, rock beats scissors, you win!"
-  end
 
   it "can process user choices of any case" do
-    game = RPSGame.new("PaPeR")
+    game = RPSGame.new("PaPeR", 1)
 
     expect(game.play).to eq "Congrats, paper beats rock, you win!"
   end

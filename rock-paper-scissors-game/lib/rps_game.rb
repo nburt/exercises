@@ -41,7 +41,7 @@ class RPSGame
           "It's a tie!"
         end
       else
-        user_choice = "Error, please type rock, paper, or scissors."
+        "Error, please type rock, paper, or scissors."
     end
 
   end
