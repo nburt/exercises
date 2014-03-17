@@ -20,6 +20,16 @@ describe RPSGame do
 
     expect(game.play).to eq "Congrats, rock beats scissors, you win!"
   end
+
+  it "keeps score based on wins, losses, and ties" do
+    game = RPSGame.new("rock", 3)
+    game.play
+    game.play
+    game.play
+
+    expect(game.score).to eq "Wins: 3, Losses: 0, Ties: 0"
+  end
+
 end
 
 # Your task is to write a program to play rock-paper-scissors with
